@@ -2,10 +2,11 @@
 #             VARIABLES                   #
 ###########################################
 
-NAME			=	ClapTrap
+NAME			=	FrapTrap
 OBJ_DIR			=	obj
 SRC				= 	src/ClapTrap.cpp	\
 					src/ScavTrap.cpp	\
+					src/FragTrap.cpp	\
 					main.cpp
 INCLUDES		=	include
 CPP				=	c++
@@ -19,7 +20,7 @@ OBJ				=	$(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "Compiling ClapTrap 42"
+	@echo "Compiling FragTrap 42"
 	@$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 $(OBJ_DIR)/%.o: %.cpp

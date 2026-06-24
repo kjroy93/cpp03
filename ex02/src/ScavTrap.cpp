@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:48:35 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/22 17:52:49 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/06/24 16:04:24 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	ScavTrap::attack(const std::string& target)
 
 void	ScavTrap::guardGate()
 {
-	if (this->hit_points_ == 0)
+	if (this->hit_points_ == 0 || this->energy_ <= 2)
 		std::cout << this->name_ << " cannot activate defensive protocol" << std::endl;
 	std::cout << this->name_ << " Activates defensive protocol" << std::endl;
 	takeDamage(0);

@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 17:28:58 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/23 17:45:47 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/06/24 16:41:50 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,3 +55,26 @@ FragTrap::~FragTrap()
 	std::cout << "Destructor of FragTrap called" << std::endl;
 }
 
+void	FragTrap::attack(const std::string &target)
+{
+	std::cout << this->name_ << " cast Chill Touch to " << target << ", causing "
+	<< this->attack_power_ << " points of damage!" << std::endl;
+	this->energy_ -= 4; 
+}
+
+void	FragTrap::highFiveGuys(void)
+{
+	if (this->energy_ <= 3)
+	{
+		std::cout <<  this->name_ << " has to low energy to use it's skill." << std::endl;
+		return ;
+	}
+	if (this->hit_points_ == 0)
+	{
+		std::cout << this->name_ << " is dead." << std::endl;
+		return ;
+	}
+	std::cout << this->name_ << " used it's skill!"
+	<< " It makes a high five to gain x2 damage for two turns!" << std::endl;
+	this->attack_power_ *= 2;
+}

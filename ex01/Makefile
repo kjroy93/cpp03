@@ -2,7 +2,7 @@
 #             VARIABLES                   #
 ###########################################
 
-NAME			=	ClapTrap
+NAME			=	ScavTrap
 OBJ_DIR			=	obj
 SRC				= 	src/ClapTrap.cpp	\
 					src/ScavTrap.cpp	\
