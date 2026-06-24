@@ -6,14 +6,13 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 15:27:49 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/24 17:00:29 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/06/24 18:12:05 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 # include "ClapTrap.hpp"
-# include <iostream>
 
 class	ScavTrap : virtual public ClapTrap
 {
