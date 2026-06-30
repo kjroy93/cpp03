@@ -6,7 +6,7 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 19:09:06 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/24 16:52:31 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/06/30 15:59:52 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(void)
 	ScavTrap	robot_01;
 	FragTrap	robot_02("Bavsargra", 100, 100, 30);
 
-	robot_01 = ScavTrap("Liael=Animus", 75, 50, 20);
+	robot_01 = ScavTrap("Liael=Animus");
 	std::cout << robot.getName() << " Stats: "
 	<< "\n"
 	<< "Hit Points: " << robot.getHitPoints()

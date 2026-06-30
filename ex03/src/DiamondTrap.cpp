@@ -6,27 +6,34 @@
 /*   By: kmarrero <kmarrero@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/24 16:47:31 by kmarrero          #+#    #+#             */
-/*   Updated: 2026/06/24 20:07:37 by kmarrero         ###   ########.fr       */
+/*   Updated: 2026/06/30 18:43:30 by kmarrero         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap()
-	:ClapTrap()
+	:ClapTrap("empty_clap_name"),
+	ScavTrap(),
+	FragTrap(),
+	name_("empty")
 {
 	std::cout << "Default constructor of DiamondTrap" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name)
-	:ClapTrap(name_ + "_clap_name", 100, 50, 30),
+	:ClapTrap(name + "_clap_name", 100, 50, 30),
+	ScavTrap(),
+	FragTrap(),
 	name_(name)
 {
 	std::cout << "Constructor to assign name to DiamondTrap called" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(const std::string& name, const int hp, const int ep, const int ap)
-	:ClapTrap(name_ + "_clap_name", hp, ep, ap),
+	:ClapTrap(name + "_clap_name", hp, ep, ap),
+	ScavTrap(),
+	FragTrap(),
 	name_(name)
 {
 	std::cout << "DiamondTrap constructor called" << std::endl;
